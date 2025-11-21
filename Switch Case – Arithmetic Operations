@@ -1,0 +1,39 @@
+Aim:
+To perform arithmetic operations (+, -, *, /) using switch case.
+
+Algorithm:
+Start
+Input two numbers
+Input operator
+Use switch to perform operation
+Print result
+Stop
+
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int a, b;
+    char op;
+    cout<<"Enter two numbers: ";
+    cin>>a>>b;
+    cout<<"Enter operator (+ - * /): ";
+    cin>>op;
+    switch(op){
+        case '+': cout<<"Result = "<<a+b; break;
+        case '-': cout<<"Result = "<<a-b; break;
+        case '*': cout<<"Result = "<<a*b; break;
+        case '/': cout<<"Result = "<<a/b; break;
+        default: cout<<"Invalid Operator";
+    }
+
+    return 0;
+}
+
+Output:
+Enter two numbers: 8 4
+Enter operator: +
+Result = 12
+
+Result:
+Arithmetic operations are performed correctly using switch case.
