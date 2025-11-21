@@ -1,0 +1,49 @@
+AIM:
+To write a C++ program that passes objects as function arguments.
+
+ALGORITHM:
+Create a class with a data member.
+Create a function that accepts an object as an argument.
+Pass objects from main() to the function.
+Display results.
+End the program.
+
+PROGRAM:
+#include <iostream>
+using namespace std;
+
+class Number {
+    int value;
+
+public:
+    void getData(int x) {
+        value = x;
+    }
+
+    void display() {
+        cout << "Value = " << value << endl;
+    }
+
+    void add(Number obj1, Number obj2) {
+        value = obj1.value + obj2.value;
+    }
+};
+
+int main() {
+    Number n1, n2, n3;
+    n1.getData(10);
+    n2.getData(20);
+
+    n3.add(n1, n2);
+
+    cout << "After addition: ";
+    n3.display();
+
+    return 0;
+}
+
+OUTPUT:
+After addition: Value = 30
+
+RESULT:
+Objects were successfully passed as function arguments.
