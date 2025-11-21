@@ -1,0 +1,30 @@
+Aim:
+To find the greatest of two numbers.
+
+Algorithm:
+Start
+Read two numbers
+If a > b → a is largest
+Else → b is largest
+Stop
+
+program:
+#include<iostream>
+using namespace std;
+int main(){
+    int a, b;
+    cout<<"Enter two numbers: ";
+    cin>>a>>b;
+    if(a > b)
+        cout<<"Largest number = "<<a;
+    else
+        cout<<"Largest number = "<<b;
+    return 0;
+}
+
+Sample Output:
+Enter two numbers: 10 25
+Largest number = 25
+
+Result:
+The program finds the largest of two numbers.
