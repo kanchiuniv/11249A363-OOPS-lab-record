@@ -1,0 +1,53 @@
+Aim:
+To write a C++ program to demonstrate the concept of single inheritance.
+
+Algorithm:
+Start the program.
+Define a base class with data members and member functions.
+Define a derived class that inherits from the base class.
+Create an object of the derived class.
+Use the derived class object to access both base and derived class members.
+Display the results.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    string name;
+    int age;
+
+    void getData() {
+        name = "John";
+        age = 20;
+    }
+};
+
+class Student : public Person {
+public:
+    int roll;
+
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Roll No: " << roll << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.getData();
+    s.roll = 101;
+    s.display();
+    return 0;
+}
+
+Output:
+Name: John
+Age: 20
+Roll No: 101
+
+Result:
+Single inheritance was successfully demonstrated.
