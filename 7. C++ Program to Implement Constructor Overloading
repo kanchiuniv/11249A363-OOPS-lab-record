@@ -1,0 +1,51 @@
+AIM:
+To write a C++ program that demonstrates constructor overloading.
+
+ALGORITHM:
+Create a class with multiple constructors having different parameters.
+Use default, parameterized, and parameterized with more arguments.
+Create objects for each type of constructor.
+Display outputs.
+End the program.
+
+PROGRAM:
+#include <iostream>
+using namespace std;
+
+class Sample {
+    int x, y;
+
+public:
+    Sample() {
+        x = y = 0;
+        cout << "Default Constructor: x=" << x << " y=" << y << endl;
+    }
+
+    Sample(int a) {
+        x = a;
+        y = 0;
+        cout << "Constructor with one parameter: x=" << x << " y=" << y << endl;
+    }
+
+    Sample(int a, int b) {
+        x = a;
+        y = b;
+        cout << "Constructor with two parameters: x=" << x << " y=" << y << endl;
+    }
+};
+
+int main() {
+    Sample s1;
+    Sample s2(5);
+    Sample s3(10, 20);
+
+    return 0;
+}
+
+OUTPUT
+Default Constructor: x=0 y=0
+Constructor with one parameter: x=5 y=0
+Constructor with two parameters: x=10 y=20
+
+RESULT
+Constructor overloading was successfully implemented.
