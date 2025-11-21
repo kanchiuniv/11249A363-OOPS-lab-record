@@ -1,0 +1,36 @@
+Aim:
+To write a C++ program to demonstrate memory management using new and delete operators.
+
+Algorithm:
+Start the program.
+Declare a pointer variable.
+Use new to allocate memory dynamically for an integer.
+Store a value in the allocated memory.
+Display the value.
+Use delete to release the memory.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int *ptr;
+
+    ptr = new int;          // dynamic allocation
+    *ptr = 50;
+
+    cout << "Value stored in dynamic memory: " << *ptr << endl;
+
+    delete ptr;             // free memory
+    cout << "Memory released successfully.";
+
+    return 0;
+}
+
+Output:
+Value stored in dynamic memory: 50
+Memory released successfully.
+
+Result:
+Dynamic memory allocation and deallocation using new and delete were successfully implemented.
