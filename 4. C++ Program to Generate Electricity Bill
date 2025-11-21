@@ -1,0 +1,92 @@
+Aim:
+To compute consumer electricity bill using class and objects.
+
+Algorithm:
+Start
+Create a class with consumer number, name, previous reading, current reading, connection type.
+Calculate units = current − previous.
+Based on type (Domestic/Commercial), apply tariff:
+First 100 units
+101–200 units
+201–500 units
+501 units
+Calculate bill and display it.
+Stop.
+
+program:
+#include<iostream>
+using namespace std;
+
+class EB {
+    int cno, prev, curr, units;
+    string name, type;
+    float amount;
+
+public:
+    void getData() {
+        cout<<"Enter Consumer Number: ";
+        cin>>cno;
+        cout<<"Enter Consumer Name: ";
+        cin>>name;
+        cout<<"Enter Previous Reading: ";
+        cin>>prev;
+        cout<<"Enter Current Reading: ";
+        cin>>curr;
+        cout<<"Enter Connection Type (domestic/commercial): ";
+        cin>>type;
+
+        units = curr - prev;
+    }
+
+    void calculate() {
+        amount = 0;
+
+        if(type == "domestic") {
+            if(units <= 100)
+                amount = units * 1;
+            else if(units <= 200)
+                amount = 100*1 + (units-100)*2.5;
+            else if(units <= 500)
+                amount = 100*1 + 100*2.5 + (units-200)*4;
+            else
+                amount = 100*1 + 100*2.5 + 300*4 + (units-500)*6;
+        }
+        else { // commercial
+            if(units <= 100)
+                amount = units * 2;
+            else if(units <= 200)
+                amount = 100*2 + (units-100)*4.5;
+            else if(units <= 500)
+                amount = 100*2 + 100*4.5 + (units-200)*6;
+            else
+                amount = 100*2 + 100*4.5 + 300*6 + (units-500)*7;
+        }
+    }
+
+    void display() {
+        cout<<"\n--- Electricity Bill ---\n";
+        cout<<"Consumer No: "<<cno<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Units Consumed: "<<units<<endl;
+        cout<<"Connection Type: "<<type<<endl;
+        cout<<"Total Amount: Rs. "<<amount<<endl;
+    }
+};
+
+int main() {
+    EB e;
+    e.getData();
+    e.calculate();
+    e.display();
+    return 0;
+}
+
+Output:
+Consumer No: 1001
+Name: Kumar
+Units Consumed: 250
+Connection Type: domestic
+Total Amount: Rs. 650
+
+Result:
+Electricity bill generated successfully.
