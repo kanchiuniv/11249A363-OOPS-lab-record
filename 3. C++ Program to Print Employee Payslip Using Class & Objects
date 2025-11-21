@@ -1,0 +1,72 @@
+Aim:
+To generate employee payslip using class and objects.
+
+Algorithm:
+Start
+Create a class Employee with name and basic pay.
+Read basic pay from user.
+Compute:
+DA = Basic * 70%
+HRA = Basic * 10%
+Gross = Basic + DA + HRA
+Tax = Gross * 20%
+Net Salary = Gross – Tax
+Display payslip.
+Stop.
+
+program:
+#include<iostream>
+using namespace std;
+
+class Employee {
+    string name;
+    float basic, da, hra, gross, tax, net;
+public:
+    void getData() {
+        cout<<"Enter Employee Name: ";
+        cin>>name;
+        cout<<"Enter Basic Pay: ";
+        cin>>basic;
+    }
+
+    void calculate() {
+        da = basic * 0.70;
+        hra = basic * 0.10;
+        gross = basic + da + hra;
+        tax = gross * 0.20;
+        net = gross - tax;
+    }
+
+    void display() {
+        cout<<"\n--- Employee Payslip ---\n";
+        cout<<"Name: "<<name<<endl;
+        cout<<"Basic Pay: "<<basic<<endl;
+        cout<<"DA: "<<da<<endl;
+        cout<<"HRA: "<<hra<<endl;
+        cout<<"Gross Salary: "<<gross<<endl;
+        cout<<"Tax: "<<tax<<endl;
+        cout<<"Net Salary: "<<net<<endl;
+    }
+};
+
+int main() {
+    Employee e;
+    e.getData();
+    e.calculate();
+    e.display();
+    return 0;
+}
+
+Output:
+Enter Employee Name: John
+Enter Basic Pay: 20000
+--- Employee Payslip ---
+DA: 14000
+HRA: 2000
+Gross Salary: 36000
+Tax: 7200
+Net Salary: 28800
+
+Result:
+
+Employee payslip generated successfully using class & objects.
