@@ -1,0 +1,33 @@
+Aim:
+To write a C++ function template that works for multiple data types.
+
+Algorithm:
+Start program.
+Create a function template using template <class T>.
+Write a generic function (e.g., add two values).
+Call the function with different data types.
+Display results.
+End program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+template <class T>
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    cout << "Integer Add: " << add(10, 20) << endl;
+    cout << "Float Add: " << add(5.5, 2.3) << endl;
+    return 0;
+}
+
+Output:
+Integer Add: 30
+Float Add: 7.8
+
+Result:
+Function templates were successfully implemented for multiple data types.
+
