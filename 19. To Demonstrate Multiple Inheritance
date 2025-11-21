@@ -1,0 +1,47 @@
+Aim:
+To write a C++ program to demonstrate multiple inheritance.
+
+Algorithm:
+Start the program.
+Create two base classes.
+Create a derived class inheriting from both classes.
+Create object of derived class.
+Access and display data from both base classes.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+class A {
+public:
+    void showA() {
+        cout << "Base Class A\n";
+    }
+};
+class B {
+public:
+    void showB() {
+        cout << "Base Class B\n";
+    }
+};
+class C : public A, public B {
+public:
+    void showC() {
+        cout << "Derived Class C\n";
+    }
+};
+int main() {
+    C obj;
+    obj.showA();
+    obj.showB();
+    obj.showC();
+    return 0;
+}
+
+Output:
+Base Class A
+Base Class B
+Derived Class C
+
+Result:
+Multiple inheritance was successfully demonstrated.
