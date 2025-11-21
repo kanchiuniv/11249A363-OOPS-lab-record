@@ -1,0 +1,51 @@
+Aim:
+To write a C++ program that implements multilevel inheritance.
+
+Algorithm:
+Start program.
+Create a base class.
+Create a second class derived from base class.
+Create a third class derived from the second class.
+Create an object of the last class.
+Access members from all three classes.
+Display the output.
+End program.
+
+Program:
+#include <iostream>
+using namespace std;
+class A {
+public:
+    void displayA() {
+        cout << "Class A method\n";
+    }
+};
+class B : public A {
+public:
+    void displayB() {
+        cout << "Class B method\n";
+    }
+};
+
+class C : public B {
+public:
+    void displayC() {
+        cout << "Class C method\n";
+    }
+};
+
+int main() {
+    C obj;
+    obj.displayA();
+    obj.displayB();
+    obj.displayC();
+    return 0;
+}
+
+Output:
+Class A method
+Class B method
+Class C method
+
+Result:
+Multilevel inheritance was successfully demonstrated.
