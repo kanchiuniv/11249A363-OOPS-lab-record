@@ -1,0 +1,56 @@
+Aim:
+To write a C++ program that demonstrates unary operator overloading using a class.
+
+Algorithm:
+Start the program.
+Create a class with an integer data member.
+Define a constructor to initialize the value.
+Overload unary operator ++ using a member function.
+Create an object and apply the overloaded operator.
+Display results.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+class Number {
+    int x;
+public:
+    Number(int a) {
+        x = a;
+    }
+
+    void operator++() {      // Unary operator overloading
+        x = x + 1;
+    }
+
+    void display() {
+        cout << "Value: " << x << endl;
+    }
+};
+
+int main() {
+    Number n(5);
+    cout << "Before Overloading:" << endl;
+    n.display();
+
+    ++n;   // calling unary operator overload
+
+    cout << "After Overloading (++):" << endl;
+    n.display();
+
+    return 0;
+}
+
+Output:
+Before Overloading:
+Value: 5
+After Overloading (++):
+Value: 6
+
+Result:
+Unary operator overloading was successfully implemented using a class.
+
+
+Start the program.
