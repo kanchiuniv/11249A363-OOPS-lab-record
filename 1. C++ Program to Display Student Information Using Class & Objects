@@ -1,0 +1,57 @@
+Aim:
+To write a C++ program to display student details using class and objects.
+
+Algorithm:
+Start
+Create a class Student with data members: name, roll, department.
+Define a function to get input and another to display output.
+Create object for the class.
+Call functions using object.
+Display student information.
+Stop.
+
+Program:
+#include<iostream>
+using namespace std;
+
+class Student {
+    string name, dept;
+    int roll;
+public:
+    void getData() {
+        cout<<"Enter Name: ";
+        cin>>name;
+        cout<<"Enter Roll Number: ";
+        cin>>roll;
+        cout<<"Enter Department: ";
+        cin>>dept;
+    }
+
+    void display() {
+        cout<<"\n--- Student Details ---\n";
+        cout<<"Name: "<<name<<endl;
+        cout<<"Roll Number: "<<roll<<endl;
+        cout<<"Department: "<<dept<<endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.getData();
+    s.display();
+    return 0;
+}
+
+Sample Output:
+
+Enter Name: Rahul
+Enter Roll Number: 101
+Enter Department: CSE
+--- Student Details ---
+Name: Rahul
+Roll Number: 101
+Department: CSE
+
+Result:
+The program successfully displays student information using class and objects.
+The program successfully displays student information using class and objects.
