@@ -1,0 +1,48 @@
+Aim:
+To write a C++ program to concatenate two strings using binary operator overloading of the + operator.
+
+Algorithm:
+Start the program.
+Create a class with a character array/string.
+Overload binary operator + to concatenate two objects.
+Create two string objects and use + to combine them.
+Display the concatenated string.
+End the program.
+
+Program:
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Concatenate {
+    char str[50];
+public:
+    Concatenate() {}
+    Concatenate(const char s[]) {
+        strcpy(str, s);
+    }
+    Concatenate operator+(Concatenate obj) {
+        Concatenate temp;
+        strcpy(temp.str, str);
+        strcat(temp.str, obj.str);
+        return temp;
+    }
+    void display() {
+        cout << "Concatenated String: " << str << endl;
+    }
+};
+
+int main() {
+    Concatenate s1("Hello "), s2("World");
+    Concatenate s3;
+
+    s3 = s1 + s2;   // Overloaded operator +
+    s3.display();
+
+    return 0;
+}
+
+Output:
+Concatenated String: Hello World
+
+Result:
+String concatenation using binary operator overloading was successfully implemented.
