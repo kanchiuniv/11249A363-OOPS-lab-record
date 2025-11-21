@@ -1,0 +1,46 @@
+Aim:
+To find the factorial of a given number.
+
+Algorithm:
+Start
+Input n
+Initialize fact = 1
+For i = 1 to n
+fact = fact × i
+Print fact
+Stop
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int n, fact = 1;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    for(int i = 1; i <= n; i++)
+        fact *= i;
+
+    cout<<"Factorial = "<<fact;
+    return 0;
+}
+
+Sample Output:
+Enter a number: 5
+Factorial = 120
+Result:
+The program successfully computes the factorial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Samp
