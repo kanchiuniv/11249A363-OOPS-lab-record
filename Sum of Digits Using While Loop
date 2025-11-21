@@ -1,0 +1,39 @@
+Aim:
+To find the sum of digits of a given number using a loop.
+
+Algorithm:
+Start
+Input number n
+Initialize sum = 0
+Repeat while n > 0
+digit = n % 10
+sum = sum + digit
+n = n / 10
+Print sum
+Stop
+
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int n, sum = 0, digit;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    while(n > 0){
+        digit = n % 10;
+        sum += digit;
+        n /= 10;
+    }
+
+    cout<<"Sum of digits = "<<sum;
+    return 0;
+}
+
+Sample Output:
+Enter a number: 123
+Sum of digits = 6
+
+Result:
+The program finds the sum of digits of the given number.
+
