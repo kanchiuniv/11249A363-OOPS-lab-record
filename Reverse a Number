@@ -1,0 +1,36 @@
+Aim:
+To reverse the digits of a number.
+
+Algorithm
+Start
+Input n
+Initialize rev = 0
+While n > 0
+rev = rev × 10 + (n % 10)
+n = n / 10
+Print rev
+Stop
+
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int n, rev = 0;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    while(n > 0){
+        rev = rev*10 + n%10;
+        n /= 10;
+    }
+
+    cout<<"Reversed Number = "<<rev;
+    return 0;
+}
+
+Sample Output:
+Enter a number: 9876
+Reversed Number = 6789
+
+Result:
+The number is reversed successfully.
