@@ -1,0 +1,30 @@
+Aim:
+To convert temperature from Celsius to Fahrenheit.
+
+Algorithm:
+Start
+Input Celsius temperature
+Use formula: F = (C × 9/5) + 32
+Print Fahrenheit value
+Stop
+
+program:
+#include<iostream>
+using namespace std;
+int main(){
+    float c, f;
+    cout<<"Enter temperature in Celsius: ";
+    cin>>c;
+
+    f = (c * 9/5) + 32;
+    cout<<"Fahrenheit = "<<f;
+
+    return 0;
+}
+
+Sample Output:
+Enter temperature: 0
+Fahrenheit = 32
+
+Result:
+The program converts temperature successfully.
