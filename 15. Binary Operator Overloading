@@ -1,0 +1,47 @@
+Aim:
+To write a C++ program that implements binary operator overloading using class objects.
+
+Algorithm:
+Start the program.
+Create a class with integer data members.
+Overload the binary operator + using a member function.
+Create two objects and add them using the overloaded operator.
+Display the result.
+End the program.
+
+Program
+#include <iostream>
+using namespace std;
+
+class Add {
+    int x;
+public:
+    Add(int a = 0) {
+        x = a;
+    }
+
+    Add operator+(Add obj) {   // binary operator overloading
+        Add temp;
+        temp.x = x + obj.x;
+        return temp;
+    }
+
+    void display() {
+        cout << "Result = " << x << endl;
+    }
+};
+
+int main() {
+    Add a1(10), a2(20), a3;
+
+    a3 = a1 + a2;  // calling overloaded operator
+    a3.display();
+
+    return 0;
+}
+
+Output:
+Result = 30
+
+Result:
+Binary operator overloading was successfully implemented for the addition of objects.
