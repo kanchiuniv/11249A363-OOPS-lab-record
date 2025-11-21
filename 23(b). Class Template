@@ -1,0 +1,46 @@
+Aim:
+To write a C++ class template that works for different data types.
+
+Algorithm:
+Start program.
+Define a class template using template <class T>.
+Define constructor and member functions inside the class.
+Create objects of different data types.
+Display results.
+End program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Sample {
+    T a, b;
+public:
+    Sample(T x, T y) {
+        a = x;
+        b = y;
+    }
+
+    T add() {
+        return a + b;
+    }
+};
+
+int main() {
+    Sample<int> s1(10, 20);
+    Sample<float> s2(2.5, 3.7);
+
+    cout << "Integer Addition: " << s1.add() << endl;
+    cout << "Float Addition: " << s2.add() << endl;
+
+    return 0;
+}
+
+Output:
+Integer Addition: 30
+Float Addition: 6.2
+
+Result:
+Class templates were successfully demonstrated using different data types.
+
