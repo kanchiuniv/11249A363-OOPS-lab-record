@@ -1,0 +1,58 @@
+Aim:
+To display book information using class and objects with member functions defined outside the class.
+
+Algorithm:
+Start
+Create a class Book with title, author, and price.
+Declare member functions inside class but define them outside.
+Get details from user and print them.
+Stop.
+
+program:
+#include<iostream>
+using namespace std;
+
+class Book {
+    string title, author;
+    float price;
+public:
+    void getData();
+    void display();
+};
+
+void Book::getData() {
+    cout<<"Enter Book Title: ";
+    cin>>title;
+    cout<<"Enter Author Name: ";
+    cin>>author;
+    cout<<"Enter Price: ";
+    cin>>price;
+}
+
+void Book::display() {
+    cout<<"\n--- Book Details ---\n";
+    cout<<"Title: "<<title<<endl;
+    cout<<"Author: "<<author<<endl;
+    cout<<"Price: "<<price<<endl;
+}
+
+int main() {
+    Book b;
+    b.getData();
+    b.display();
+    return 0;
+}
+
+Output:
+
+Enter Book Title: CPP
+Enter Author Name: Balagurusamy
+Enter Price: 450
+--- Book Details ---
+Title: CPP
+Author: Balagurusamy
+Price: 450
+
+Result:
+
+The program displays book details with member functions defined outside the class.
