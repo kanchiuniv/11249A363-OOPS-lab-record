@@ -1,0 +1,42 @@
+Aim:
+To check if a number is an Armstrong number.
+
+Algorithm:
+Start
+Input n
+Make temp = n
+Initialize sum = 0
+While temp > 0
+digit = temp % 10
+sum += digit³
+temp = temp / 10
+If sum == n → Armstrong
+Else → Not Armstrong
+Stop
+
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int n, temp, sum = 0, digit;
+    cout<<"Enter a number: ";
+    cin>>n;
+    temp = n;
+    while(temp > 0){
+        digit = temp % 10;
+        sum += digit * digit * digit;
+        temp /= 10;
+    }
+    if(sum == n)
+        cout<<"Armstrong Number";
+    else
+        cout<<"Not Armstrong";
+    return 0;
+}
+
+Sample Output:
+Enter a number: 153
+Armstrong Number
+
+Result:
+The program determines whether a number is Armstrong.
