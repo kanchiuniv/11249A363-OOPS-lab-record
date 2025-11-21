@@ -1,0 +1,41 @@
+Aim:
+To write a C++ program that demonstrates the use of a friend function.
+
+Algorithm:
+Start the program.
+Define a class with private data members.
+Declare a friend function inside the class.
+Define the friend function outside the class to access private data.
+Create object and call friend function.
+Display results.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+class Sample {
+    int a, b;
+public:
+    Sample(int x, int y) {
+        a = x; 
+        b = y;
+    }
+    friend int add(Sample s);   // friend function
+};
+
+int add(Sample s) {
+    return s.a + s.b;   // accessing private members
+}
+
+int main() {
+    Sample obj(10, 20);
+    cout << "Sum = " << add(obj);
+    return 0;
+}
+
+Output:
+Sum = 30
+
+Result:
+The program successfully demonstrated how friend functions can access private members of a class.
