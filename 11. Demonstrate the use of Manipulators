@@ -1,0 +1,40 @@
+Aim:
+To write a C++ program that demonstrates the use of manipulators such as setw(), setprecision(), fixed, and endl.
+
+Algorithm:
+Start the program.
+Include <iostream> and <iomanip> header files.
+Declare variables of different types.
+Use manipulators like setw() to format output width.
+Use fixed and setprecision() to control decimal points.
+Display the formatted output.
+End the program.
+
+Program
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int a = 25, b = 300, c = 1250;
+    double x = 45.6789;
+    cout << "Demonstrating setw():\n";
+    cout << setw(5) << a << endl;
+    cout << setw(5) << b << endl;
+    cout << setw(5) << c << endl;
+    cout << "\nDemonstrating setprecision() and fixed:\n";
+    cout << fixed << setprecision(2) << x << endl;
+    return 0;
+}
+
+Output:
+Demonstrating setw():
+   25
+  300
+ 1250
+Demonstrating setprecision() and fixed:
+45.68
+
+Result:
+Thus, manipulators like setw(), setprecision(), and fixed were successfully demonstrated using a C++ program.
+
