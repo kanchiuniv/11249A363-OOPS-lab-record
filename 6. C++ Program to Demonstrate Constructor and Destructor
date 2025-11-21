@@ -1,0 +1,39 @@
+AIM:
+To write a C++ program that demonstrates the working of constructor and destructor.
+
+ALGORITHM:
+Start the program.
+Create a class containing a constructor and destructor.
+Constructor should display a message when an object is created.
+Destructor should display a message when an object is destroyed.
+Create an object inside main().
+End the program.
+
+PROGRAM:
+#include <iostream>
+using namespace std;
+
+class Demo {
+public:
+    Demo() {
+        cout << "Constructor is called" << endl;
+    }
+
+    ~Demo() {
+        cout << "Destructor is called" << endl;
+    }
+};
+
+int main() {
+    Demo obj;  
+    cout << "Inside main function" << endl;
+    return 0;
+}
+
+OUTPUT:
+Constructor is called
+Inside main function
+Destructor is called
+
+RESULT:
+The program successfully demonstrated the execution of constructor and destructor.
