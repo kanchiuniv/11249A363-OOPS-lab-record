@@ -1,0 +1,30 @@
+AIM:
+To write a C++ program that demonstrates inline function usage.
+
+ALGORITHM:
+Create an inline function that calculates the square of a number.
+Call the inline function in main().
+Display output.
+End the program.
+
+PROGRAM:
+#include <iostream>
+using namespace std;
+
+inline int square(int x) {
+    return x * x;
+}
+
+int main() {
+    int n = 5;
+    cout << "Square of " << n << " is " << square(n);
+    return 0;
+}
+
+OUTPUT:
+csharp
+Copy code
+Square of 5 is 25
+RESULT:
+Inline function executed successfully, reducing function overhead.
+
