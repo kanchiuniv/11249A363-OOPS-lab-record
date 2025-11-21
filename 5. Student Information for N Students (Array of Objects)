@@ -1,0 +1,68 @@
+Aim:
+To store and display details of N students using array of objects.
+
+Algorithm:
+Start
+Create a Student class with roll, name, and marks.
+Declare an array of objects.
+For each object, read details.
+Display details of all students.
+Stop.
+
+program:
+#include<iostream>
+using namespace std;
+
+class Student {
+    int roll;
+    string name;
+    float marks;
+public:
+    void getData() {
+        cout<<"Enter Roll Number: ";
+        cin>>roll;
+        cout<<"Enter Name: ";
+        cin>>name;
+        cout<<"Enter Marks: ";
+        cin>>marks;
+    }
+
+    void display() {
+        cout<<"\nRoll: "<<roll<<"  Name: "<<name<<"  Marks: "<<marks;
+    }
+};
+
+int main() {
+    int n;
+    cout<<"Enter number of students: ";
+    cin>>n;
+
+    Student s[n];
+
+    cout<<"\n--- Enter Student Details ---\n";
+    for(int i=0; i<n; i++)
+        s[i].getData();
+
+    cout<<"\n--- Student Information ---\n";
+    for(int i=0; i<n; i++)
+        s[i].display();
+
+    return 0;
+}
+
+Output:
+Enter number of students: 2
+Enter Roll Number: 1
+Enter Name: Priya
+Enter Marks: 89
+Enter Roll Number: 2
+Enter Name: Arjun
+Enter Marks: 92
+
+--- Student Information ---
+Roll: 1 Name: Priya Marks: 89
+Roll: 2 Name: Arjun Marks: 92
+
+Result:
+The program successfully stores and displays details of multiple students using array of objects.
+The program successfully stores and displays details of multiple students using array of objects.
