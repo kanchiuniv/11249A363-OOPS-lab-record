@@ -1,0 +1,43 @@
+Aim:
+To check whether a given number is a palindrome.
+
+Algorithm:
+Start
+Input n
+temp = n, rev = 0
+While temp > 0
+rem = temp % 10
+rev = rev × 10 + rem
+temp = temp / 10
+If rev == n → palindrome
+Else → not palindrome
+Stop
+
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int n, temp, rev = 0;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    temp = n;
+    while(temp > 0){
+        rev = rev*10 + temp%10;
+        temp /= 10;
+    }
+
+    if(rev == n)
+        cout<<"Palindrome Number";
+    else
+        cout<<"Not Palindrome";
+
+    return 0;
+}
+
+Sample Output:
+Enter a number: 121
+Palindrome Number
+
+Result:
+The program checks whether a number is palindrome.
