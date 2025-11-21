@@ -1,0 +1,45 @@
+AIM:
+To write a C++ program that demonstrates function overloading.
+
+ALGORITHM:
+Create a class having multiple functions with same name but different parameters.
+Call each overloaded function using various arguments.
+Display output.
+End the program.
+
+PROGRAM:
+#include <iostream>
+using namespace std;
+
+class Print {
+public:
+    void show(int x) {
+        cout << "Integer: " << x << endl;
+    }
+
+    void show(double y) {
+        cout << "Double: " << y << endl;
+    }
+
+    void show(string s) {
+        cout << "String: " << s << endl;
+    }
+};
+
+int main() {
+    Print p;
+    p.show(10);
+    p.show(5.75);
+    p.show("Function Overloading");
+
+    return 0;
+}
+
+OUTPUT:
+Integer: 10
+Double: 5.75
+String: Function Overloading
+
+RESULT:
+Function overloading works correctly by calling different versions of the same function.
+
