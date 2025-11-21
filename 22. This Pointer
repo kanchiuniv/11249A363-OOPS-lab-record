@@ -1,0 +1,37 @@
+Aim:
+To write a C++ program that demonstrates the use of the this pointer inside a class.
+
+Algorithm:
+Start the program.
+Create a class with data members.
+Use this pointer to refer to the calling object.
+Use a member function to assign values using this.
+Display the result.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+class Demo {
+    int x;
+public:
+    void setData(int x) {
+        this->x = x;    // using this pointer
+    }
+
+    void display() {
+        cout << "Value of x: " << x << endl;
+    }
+};
+int main() {
+    Demo d;
+    d.setData(100);
+    d.display();
+    return 0;
+}
+
+Output:
+Value of x: 100
+
+Result:
+The program successfully demonstrated usage of the this pointer.
