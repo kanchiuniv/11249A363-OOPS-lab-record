@@ -1,0 +1,43 @@
+Aim:
+To write a C++ program demonstrating exception handling using try, throw, and catch.
+
+Algorithm:
+Start program.
+Read a number from the user.
+If number is zero, throw an exception.
+Catch the exception and display an error message.
+Otherwise, perform division and display result.
+End program.
+
+Program:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    try {
+        if (b == 0)
+            throw b;
+
+        cout << "Division = " << a / b << endl;
+    }
+    catch (int x) {
+        cout << "Error: Division by zero is not allowed!" << endl;
+    }
+
+    return 0;
+}
+
+Output:
+Enter two numbers: 10 0
+Error: Division by zero is not allowed!
+(OR)
+Enter two numbers: 20 5
+Division = 4
+
+Result:
+Exception handling techniques using try, throw, and catch were successfully implemented.
+Exception handling techniques using try, throw, and catch were successfully implemented.
