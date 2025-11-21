@@ -1,0 +1,44 @@
+Aim:
+To print the first 10 prime numbers.
+
+Algorithm:
+Start
+Initialize count = 0, num = 2
+Repeat until count = 10
+Check if num is prime
+If yes → print it, increment count
+Increment num
+Stop
+
+Program:
+#include<iostream>
+using namespace std;
+int main(){
+    int num = 2, count = 0;
+
+    while(count < 10){
+        int flag = 0;
+
+        for(int i = 2; i <= num/2; i++){
+            if(num % i == 0){
+                flag = 1;
+                break;
+            }
+        }
+
+        if(flag == 0){
+            cout<<num<<" ";
+            count++;
+        }
+
+        num++;
+    }
+
+    return 0;
+}
+
+Sample Output:
+2 3 5 7 11 13 17 19 23 29
+
+Result:
+First 10 prime numbers are displayed.
