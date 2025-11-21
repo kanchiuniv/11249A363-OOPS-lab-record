@@ -1,0 +1,54 @@
+Aim:
+To write a C++ program that shows how static data members and static member functions work within a class.
+
+Algorithm:
+Start the program.
+Create a class with:
+one normal data member,
+one static data member,
+one static function.
+one function to set and display data.
+Increment the static data member inside the constructor.
+Create multiple objects to observe the static member behavior.
+Call the static member function using class name.
+End the program.
+
+Program:
+#include <iostream>
+using namespace std;
+class Student {
+    int rollno;
+    static int count;   // static data member
+public:
+    Student(int r) {
+        rollno = r;
+        count++;        // increment static count
+    }
+    void display() {
+        cout << "Roll No: " << rollno << endl;
+    }
+    static void showCount() {   // static function
+        cout << "Total Students: " << count << endl;
+    }
+};
+// Initialize static member
+int Student::count = 0;
+int main() {
+    Student s1(101);
+    Student s2(102);
+    Student s3(103);
+    s1.display();
+    s2.display();
+    s3.display();
+    Student::showCount();   // calling static member function
+    return 0;
+}
+
+Output:
+Roll No: 101
+Roll No: 102
+Roll No: 103
+Total Students: 3
+
+Result:
+The program successfully demonstrated the use of static data members and static member functions, showing that static members retain values across all objects.
