@@ -1,0 +1,37 @@
+Aim:
+To verify if the entered number is prime.
+
+Algorithm:
+Start
+Input n
+Check divisibility from 2 to n/2
+If divisible → Not Prime
+Else → Prime
+Stop
+
+program:
+#include<iostream>
+using namespace std;
+int main(){
+    int n, i, flag = 0;
+    cout<<"Enter a number: ";
+    cin>>n;
+    for(i = 2; i <= n/2; i++){
+        if(n % i == 0){
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 0 && n > 1)
+        cout<<"Prime Number";
+    else
+        cout<<"Not Prime";
+    return 0;
+}
+
+Sample Output:
+Enter a number: 11
+Prime Number
+
+Result:
+The program correctly identifies prime numbers.
